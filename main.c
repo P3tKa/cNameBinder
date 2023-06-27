@@ -132,7 +132,7 @@ void printStudents() {
 
   RB_FOREACH(studentNode, Tree, &root) {
     printf("\n|-_-_-_ Unique student: %d _-_-_-|\n", count);
-    printf("|\tFull name: %s,\n|\thash: %llu,\n|\tFirst name: %s, \n",
+    printf("\tFull name: %s,\n\thash: %llu,\n\tFirst name: %s, \n",
            studentNode->fullName, studentNode->hash, studentNode->firstName);
 
     /* Print duplicates if any */
