@@ -1,6 +1,7 @@
 # cNameBinder
 
 FIND and BIND people with exact first names together
+![program screenshot](screenshot.png)
 
 ## Description
 
