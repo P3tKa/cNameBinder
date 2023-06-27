@@ -128,17 +128,17 @@ void parseFile(char *fileName) {
 /* Function to print the student nodes and their duplicates */
 void printStudents() {
   struct Node *studentNode;
-  int count = 0;
+  int count = 1;
 
   RB_FOREACH(studentNode, Tree, &root) {
     printf("\n|-_-_-_ Unique student: %d _-_-_-|\n", count);
-    printf("Full name: %s, First name: %s, hash: %llu\n", studentNode->fullName,
-           studentNode->firstName, studentNode->hash);
+    printf("|\tFull name: %s,\n|\thash: %llu,\n|\tFirst name: %s, \n",
+           studentNode->fullName, studentNode->hash, studentNode->firstName);
 
     /* Print duplicates if any */
     struct DuplicateName *duplicate;
     STAILQ_FOREACH(duplicate, &studentNode->duplicatesHead, entries) {
-      printf("\t\t\t^--> First name duplicate: %s\n", duplicate->fullName);
+      printf("\t^--> First name duplicate: %s\n", duplicate->fullName);
     }
 
     count++;
